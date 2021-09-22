@@ -2,7 +2,7 @@ package ru.urvanov.book.javaindynamics2022.ch1;
 
 public class VariableTypes {
 
-    // переменные класса ( статические ссвойства / поля )
+    // переменные класса ( статические свойства / поля )
     static int variableTypesCounter;
     static String globalName;
 
