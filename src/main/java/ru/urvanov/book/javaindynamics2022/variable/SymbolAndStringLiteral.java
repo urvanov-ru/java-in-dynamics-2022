@@ -1,10 +1,12 @@
 package ru.urvanov.book.javaindynamics2022.variable;
 
-public class SymbolAndStringLiterals {
+public class SymbolAndStringLiteral {
     public static void main(String[] args) {
         char ch1 = '\t'; // Символ табуляции
         char ch2 = 'f'; // Буква f
-        System.out.println(ch1 + ch2);
+        char ch3 = '\u00A9'; // Знак копирайта
+        char ch4 = '©'; // В коде можно использовать все символы юникода. Так тоже сработает
+        System.out.println("символы: " + ch1 + ch2 + ch3 + ch4);
 
         String myString1 = "Просто пример строки\nС переводами строк\n";
         System.out.println("myString1 = " + myString1);

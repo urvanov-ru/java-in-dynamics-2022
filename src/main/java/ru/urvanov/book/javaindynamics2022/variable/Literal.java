@@ -1,6 +1,6 @@
 package ru.urvanov.book.javaindynamics2022.variable;
 
-public class Literals {
+public class Literal {
     public static void main(String[] args) {
         // Примеры литералов (после знака присваивания)
         // true, 'f', 100000, 100, 10000 - это всё литералы.

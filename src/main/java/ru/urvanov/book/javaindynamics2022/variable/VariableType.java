@@ -1,6 +1,6 @@
 package ru.urvanov.book.javaindynamics2022.variable;
 
-public class VariableTypes {
+public class VariableType {
 
     // переменные класса ( статические свойства / поля )
     static int variableTypesCounter;

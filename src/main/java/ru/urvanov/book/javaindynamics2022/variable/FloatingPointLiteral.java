@@ -1,6 +1,6 @@
 package ru.urvanov.book.javaindynamics2022.variable;
 
-public class FloatingPointLiterals {
+public class FloatingPointLiteral {
 
     public static void main(String[] args) {
         double d1 = 123.4;

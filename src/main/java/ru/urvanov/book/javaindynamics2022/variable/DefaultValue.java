@@ -1,6 +1,6 @@
 package ru.urvanov.book.javaindynamics2022.variable;
 
-public class DefaultValues {
+public class DefaultValue {
     static byte byteValue; // 0
     static short shortValue; // 0
     static int intValue; // 0

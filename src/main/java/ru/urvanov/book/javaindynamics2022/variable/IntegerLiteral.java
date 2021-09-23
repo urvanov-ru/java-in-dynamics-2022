@@ -1,6 +1,6 @@
 package ru.urvanov.book.javaindynamics2022.variable;
 
-public class IntegerLiterals {
+public class IntegerLiteral {
 
     public static void main(String[] args) {
         // Число 41 в десятичной системе
