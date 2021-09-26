@@ -17,7 +17,7 @@ public class Unary {
         int x1 = +10; // положительная десятка
         int x2 = -x1; // -10
 
-        boolean b1 = true
+        boolean b1 = true;
         boolean b2 = !b1; // false
 
         ++x1; // теперь x1 равен 11.
