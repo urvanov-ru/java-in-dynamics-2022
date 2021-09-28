@@ -1,5 +1,8 @@
 package ru.urvanov.book.javaindynamics2022.controlflow;
 
+/**
+ * Пример switch expression, которые появились в Java 14
+ */
 public class SwitchExpression1 {
     public static void main(String[] args) {
         int moneyType = 3;
