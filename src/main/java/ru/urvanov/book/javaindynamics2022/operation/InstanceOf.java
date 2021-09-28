@@ -31,5 +31,10 @@ public class InstanceOf {
         if (obj3 instanceof LocalDate myDate2) {
             System.out.println("year=" + myDate2.getYear());
         }
+
+        // Можно даже так
+        if ((obj3 instanceof LocalDate myDate2) && (myDate2.getYear() > 1000)) {
+            System.out.println("year=" + myDate2.getYear());
+        }
     }
 }
