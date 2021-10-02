@@ -27,6 +27,11 @@ public class GoblinMethods {
         //...
     }
 
+
+
+
+    // Примеры перегрузки методов
+
     public void hit(Axe axe) {
         // ... operators
     }
@@ -49,5 +54,15 @@ public class GoblinMethods {
 
     public void hit(Sword sword, int comboCount) {
         // ... operators
+    }
+
+
+    public static void main(String[] args) {
+        GoblinMethods goblin = new GoblinMethods();
+        Scimitar scimitar = new Scimitar();
+        goblin.hit(scimitar); // будет вызван public void hit(Scimitar scimitar)
+
+        Sword sword = new Sword();
+        goblin.hit(sword); // будет вызван public void hit(Sword sword)
     }
 }
