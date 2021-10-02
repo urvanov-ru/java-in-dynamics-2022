@@ -8,4 +8,8 @@ public class GoblinFields {
     double health;
     protected int diamonds = 10;
     public String name;
+
+    // Можно объявлять поля одного типа через запятую, НО!
+    // Так делать НЕ рекомендуется
+    int x, y, z; // Объявляем три переменные: x, y, z
 }
