@@ -3,7 +3,7 @@ package ru.urvanov.javaindynamics2022.classes;
 /**
  * Передача параметров по ссылке.
  */
-public class GoblinMoney {
+public class GoblinWithMoney {
     private int money;
 
     /**
@@ -12,7 +12,9 @@ public class GoblinMoney {
      * @param arr1 тоже передаётся по ссылке.
      *             Меняя значения в нём мы меняем исходный массив.
      */
-    public static void tryChangeParameterValue(GoblinMoney goblinMoney, int[] arr1) {
+    public static void tryChangeParameterValue(
+            GoblinWithMoney goblinMoney,
+            int[] arr1) {
 
         // Эти изменения будут видны снаружи метода.
         goblinMoney.money++;
@@ -22,14 +24,14 @@ public class GoblinMoney {
         // Объекты снаружи метода не будут изменены.
         goblinMoney = null;
         arr1 = null;
-        goblinMoney = new GoblinMoney();
+        goblinMoney = new GoblinWithMoney();
         goblinMoney.money = -400;
         arr1 = new int[100];
         arr1[2] = 3;
     }
 
     public static void main(String[] args) {
-        GoblinMoney goblin = new GoblinMoney();
+        GoblinWithMoney goblin = new GoblinWithMoney();
         goblin.money = 45;
         int[] arr1 = {3, 4, 7};
         tryChangeParameterValue(goblin, arr1);
