@@ -9,8 +9,10 @@ public class Varargs {
             double par2,
             String par3,
             int... lastParameter) {
-        System.out.println("lastParameter[0] = " + lastParameter[0]); // 3
-        System.out.println("lastParameter[1] = " + lastParameter[1]); // 5
+        System.out.println("lastParameter[0] = "
+                + lastParameter[0]); // 3
+        System.out.println("lastParameter[1] = "
+                + lastParameter[1]); // 5
         //...
 
     }
