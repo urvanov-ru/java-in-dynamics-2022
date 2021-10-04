@@ -3,7 +3,7 @@ package ru.urvanov.javaindynamics2022.classes;
 /**
  * Пример метода с переменным числом параметров
  */
-public class VariableTypeParameters {
+public class Varargs {
     public void sum(
             int par1,
             double par2,
@@ -16,7 +16,7 @@ public class VariableTypeParameters {
     }
 
     public static void main(String[] args) {
-        VariableTypeParameters main = new VariableTypeParameters();
+        Varargs main = new Varargs();
         main.sum(100, 3.4, "par3", 3, 5, 6, 8, 9);
     }
 }
