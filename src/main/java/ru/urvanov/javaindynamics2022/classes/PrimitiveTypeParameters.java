@@ -1,7 +1,8 @@
 package ru.urvanov.javaindynamics2022.classes;
 
 /**
- * Пример передачи параметров примитивных типов. Они передаются по значению.
+ * Пример передачи параметров примитивных типов.
+ * Они передаются по значению.
  */
 public class PrimitiveTypeParameters {
     public void tryChangeParameterValue(int val1) {
@@ -14,7 +15,8 @@ public class PrimitiveTypeParameters {
     }
 
     public static void main(String[] args) {
-        PrimitiveTypeParameters primitiveTypeParameters = new PrimitiveTypeParameters();
+        PrimitiveTypeParameters primitiveTypeParameters =
+                new PrimitiveTypeParameters();
         int parameter1 = 100;
         System.out.println("parameter1 = " + parameter1); // 100
         primitiveTypeParameters.tryChangeParameterValue(parameter1);
