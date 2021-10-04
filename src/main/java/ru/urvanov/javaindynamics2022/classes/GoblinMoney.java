@@ -7,11 +7,10 @@ public class GoblinMoney {
     private int money;
 
     /**
-     * Параметр goblinMoney передаётся по ссылке.
-     * Меняя его поля мы меняем исходный объект.
-     * Массив тоже передаётся по ссылке.
-     * @param goblinMoney
-     * @param arr1
+     * @param goblinMoney передаётся по ссылке.
+     *      Меняя его поля мы меняем исходный объект.
+     * @param arr1 тоже передаётся по ссылке.
+     *             Меняя значения в нём мы меняем исходный массив.
      */
     public static void tryChangeParameterValue(GoblinMoney goblinMoney, int[] arr1) {
 
