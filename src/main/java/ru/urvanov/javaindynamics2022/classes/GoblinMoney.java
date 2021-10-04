@@ -6,6 +6,13 @@ package ru.urvanov.javaindynamics2022.classes;
 public class GoblinMoney {
     private int money;
 
+    /**
+     * Параметр goblinMoney передаётся по ссылке.
+     * Меняя его поля мы меняем исходный объект.
+     * Массив тоже передаётся по ссылке.
+     * @param goblinMoney
+     * @param arr1
+     */
     public static void tryChangeParameterValue(GoblinMoney goblinMoney, int[] arr1) {
 
         // Эти изменения будут видны снаружи метода.
