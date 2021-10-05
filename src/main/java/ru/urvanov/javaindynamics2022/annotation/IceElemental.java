@@ -1,6 +1,6 @@
 package ru.urvanov.javaindynamics2022.annotation;
 
-public class IceElemental {
+class IceElemental {
     // author : John Clark
     // sprites : Izabella Simpson
     // sound : Michael Lermontov
