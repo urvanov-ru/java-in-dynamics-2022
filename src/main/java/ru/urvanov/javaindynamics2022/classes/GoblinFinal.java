@@ -24,4 +24,8 @@ class GoblinFinal {
     // Этот метод нельзя скрывать в потомках.
     public static final void myFinalMethod2() {
     }
+
+
+    // Пример объявления константы
+    static final double PI = 3.141592653589793;
 }
