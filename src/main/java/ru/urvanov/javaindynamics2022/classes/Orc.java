@@ -14,4 +14,10 @@ class Orc {
         // переданное значение
         this.health = health;
     }
+
+    public static void main(String[] args) {
+        Orc orc = new Orc();
+        orc.setHealth(999.9);
+        orc.someMethod1();;
+    }
 }
