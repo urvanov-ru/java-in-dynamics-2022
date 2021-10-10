@@ -6,7 +6,7 @@
 Импорт проекта в различные IDE
 ------------------------------
 
-[Как импортировать проект в IntelliJ IDEA](https://urvanov.ru/2021/10/06/%d0%b8%d0%bc%d0%bf%d0%be%d1%80%d1%82-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0-maven-%d0%b2-idea-%d0%b8%d0%b7-github/)
+[Как импортировать проект в IntelliJ IDEA](https://urvanov.ru/2021/10/06/%d0%b8%d0%bc%d0%bf%d0%be%d1%80%d1%82-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0-maven-%d0%b8%d0%b7-github-%d0%b2-idea/)
 
 [Как импортировать проект в Eclipse](https://urvanov.ru/2021/10/07/%d0%b8%d0%bc%d0%bf%d0%be%d1%80%d1%82-%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b0-maven-%d0%b8%d0%b7-github-%d0%b2-eclipse/)
 
