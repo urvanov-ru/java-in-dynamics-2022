@@ -59,7 +59,8 @@ class OuterClassWithStaticNested {
     }
 
     public static void main(String[] args) {
-        OuterClassWithStaticNested.StaticNestedClass obj1 = new OuterClassWithStaticNested.StaticNestedClass();
+        OuterClassWithStaticNested.StaticNestedClass obj1
+                = new OuterClassWithStaticNested.StaticNestedClass();
         obj1.method1();
     }
 }
