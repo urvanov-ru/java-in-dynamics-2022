@@ -1,4 +1,4 @@
-package ru.urvanov.javaindynamics2022.innerclasses;
+package ru.urvanov.javaindynamics2022.nestedclass;
 
 /**
  * Примеры вложенных классов
