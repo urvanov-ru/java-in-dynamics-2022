@@ -57,4 +57,9 @@ class OuterClassWithStaticNested {
             oc.publicInstanceOuterMethod1();
         }
     }
+
+    public static void main(String[] args) {
+        OuterClassWithStaticNested.StaticNestedClass obj1 = new OuterClassWithStaticNested.StaticNestedClass();
+        obj1.method1();
+    }
 }
