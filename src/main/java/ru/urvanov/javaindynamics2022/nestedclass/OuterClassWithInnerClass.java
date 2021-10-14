@@ -25,7 +25,7 @@ class OuterClassWithInnerClass {
         // ... и т. д.
 
 
-        // Можно обявлять константы
+        // Можно объявлять константы
         public static final int MY_CONSTANT = 34;
 
         // Никаких других статических членов объявлять
