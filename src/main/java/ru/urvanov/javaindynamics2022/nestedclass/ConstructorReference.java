@@ -4,7 +4,9 @@ import java.util.function.Supplier;
 
 class ConstructorReference {
 
-    static ConstructorReference[] createArray(int count, Supplier<ConstructorReference> supplier) {
+    static ConstructorReference[] createArray(
+            int count,
+            Supplier<ConstructorReference> supplier) {
         ConstructorReference[] result = new ConstructorReference[count];
         for (int n = 0; n < count; n++) {
             result[n] = supplier.get();
@@ -16,10 +18,14 @@ class ConstructorReference {
 
     public static void main(String[] args) {
         // Лямбда-выражение.
-        ConstructorReference[] a1 = createArray(10, () -> new ConstructorReference());
+        ConstructorReference[] a1 = createArray(
+                10,
+                () -> new ConstructorReference());
 
         // То же самое, но с ссылкой на конструктор.
-        ConstructorReference[] a2 = createArray(10, ConstructorReference::new);
+        ConstructorReference[] a2 = createArray(
+                10,
+                ConstructorReference::new);
     }
 
 }
