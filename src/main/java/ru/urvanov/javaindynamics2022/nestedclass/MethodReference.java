@@ -1,5 +1,7 @@
 package ru.urvanov.javaindynamics2022.nestedclass;
 
+import java.util.Arrays;
+
 /**
  * Пример ссылок на методы
  */
@@ -39,5 +41,15 @@ class MethodReference {
         massOperation(a, b, OperationProvider::staticSum);
         // Ссылка на метод экземпляра
         massOperation(a, b, myOperationProvider::instanceMinus);
+
+        // Пример ссылки на статический метод
+        massOperation(a, b, OperationProvider::staticSum);
+
+        // Пример ссылки на метод определённого экземпляра
+        massOperation(a, b, myOperationProvider::instanceMinus);
+
+        // Пример ссылки на метод экземпляра произвольного объекта
+        String[] stringArray = { "Джо", "Александр", "Марфа", "Святослав" };
+        Arrays.sort(stringArray, String::compareToIgnoreCase);
     }
 }
