@@ -3,7 +3,7 @@ package ru.urvanov.javaindynamics2022.interfaces;
 public interface Monster {
 
     // Объявляем константу
-    int MONSTR_OBSTACLE_ID = 23;
+    int MONSTER_OBSTACLE_ID = 23;
 
     // методы
 
