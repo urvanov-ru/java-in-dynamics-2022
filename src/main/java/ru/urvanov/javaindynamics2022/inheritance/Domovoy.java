@@ -8,6 +8,9 @@ interface HouseSpirit {
 
 public class Domovoy implements Obstacle, HouseSpirit {
 
+    // Возникает конфликт методов по умолчанию
+    // из двух интерфейсов. Поэтому мы должны
+    // обязательно переопределить метод
     @Override
     public void writeName() {
         System.out.println("Domovoy");
