@@ -1,5 +1,8 @@
 package ru.urvanov.javaindynamics2022.inheritance;
 
+/**
+ * Пример приведения типов
+ */
 public class TypeConversion {
     public static void main(String[] args) {
         Goblin obj = new Goblin();
