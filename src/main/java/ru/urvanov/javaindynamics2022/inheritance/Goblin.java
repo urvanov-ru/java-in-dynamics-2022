@@ -26,8 +26,10 @@ public class Goblin extends Monster {
 
     void walk() {
         System.out.println("Goblin walk");
-        System.out.println("goblin gold = " + gold);
-        System.out.println("Goblin trunks = " + health);
+        System.out.println("Goblin gold = " + gold);
+        // Мы можем обратиться к скрытому полю родительского класса:
+        System.out.println("Monster gold = " + gold);
+        System.out.println("Goblin trunks = " + trunks);
         super.walk();
     }
 }
