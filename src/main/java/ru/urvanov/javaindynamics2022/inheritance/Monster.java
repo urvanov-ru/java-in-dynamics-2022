@@ -3,8 +3,8 @@ package ru.urvanov.javaindynamics2022.inheritance;
 class Monster {
 
     double gold = 10.0;
-    int ammo;
-    double health;
+    int ammo = 40;
+    double health = 100.0;
 
     Monster() {
 

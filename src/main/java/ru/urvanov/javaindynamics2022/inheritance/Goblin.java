@@ -3,7 +3,7 @@ package ru.urvanov.javaindynamics2022.inheritance;
 public class Goblin extends Monster {
 
     double gold = 20.0;
-    int trunks;
+    int trunks = 2;
 
     Goblin() {
 
@@ -28,7 +28,7 @@ public class Goblin extends Monster {
         System.out.println("Goblin walk");
         System.out.println("Goblin gold = " + gold);
         // Мы можем обратиться к скрытому полю родительского класса:
-        System.out.println("Monster gold = " + gold);
+        System.out.println("Monster gold = " + super.gold);
         System.out.println("Goblin trunks = " + trunks);
         super.walk();
     }
