@@ -1,4 +1,6 @@
 package ru.urvanov.javaindynamics2022.inheritance;
 
-public abstract class BaseMonster {
+abstract class BaseMonster {
+
+    abstract void myAbstractMethod(int myParam1, double myParam2);
 }
