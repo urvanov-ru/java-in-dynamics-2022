@@ -11,6 +11,7 @@ public class WillOrTheWisp implements Cloneable {
 
     // Переопределяем метод clone()
     // с protected на public.
+    // И возвращаемый методом тип делаем более специфичным
     public WillOrTheWisp clone()
             throws CloneNotSupportedException {
         // Мы должны вызвать метод базового класса,
@@ -30,7 +31,8 @@ public class WillOrTheWisp implements Cloneable {
         return result;
     }
 
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args)
+            throws CloneNotSupportedException {
         WillOrTheWisp willOrTheWisp = new WillOrTheWisp();
         willOrTheWisp.x = 100;
         willOrTheWisp.y = 140.33;
