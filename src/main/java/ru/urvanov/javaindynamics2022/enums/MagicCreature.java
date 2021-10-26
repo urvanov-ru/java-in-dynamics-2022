@@ -1,5 +1,6 @@
 package ru.urvanov.javaindynamics2022.enums;
 
+// Пример перечисления с конструктором
 enum MagicCreature {
     GOBLIN(100, 50),
     HOBGOBLIN(110, 30),
