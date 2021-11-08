@@ -17,10 +17,12 @@ class ShadowClass {
                 System.out.println("this.x=" + this.x);
 
                 // Член класса FirstInnerClass
-                System.out.println("FirstInnerClass.this.x=" + FirstInnerClass.this.x);
+                System.out.println("FirstInnerClass.this.x="
+                        + FirstInnerClass.this.x);
 
                 // Член класса ShadowClass
-                System.out.println("ShadowClass.this.x=" + ShadowClass.this.x);
+                System.out.println("ShadowClass.this.x="
+                        + ShadowClass.this.x);
             }
         }
     }
@@ -28,7 +30,8 @@ class ShadowClass {
     public static void main(String[] args) {
         ShadowClass sc = new ShadowClass();
         ShadowClass.FirstInnerClass fic = sc.new FirstInnerClass();
-        ShadowClass.FirstInnerClass.SecondInnerClass sic = fic.new SecondInnerClass();
+        ShadowClass.FirstInnerClass.SecondInnerClass sic
+                = fic.new SecondInnerClass();
         sic.method1(3);
     }
 }
