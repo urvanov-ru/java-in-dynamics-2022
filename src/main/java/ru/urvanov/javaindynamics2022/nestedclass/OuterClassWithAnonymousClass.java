@@ -29,7 +29,8 @@ class OuterClassWithAnonymousClass {
                 // x2 не объявлена как final, но она никогда
                 // не меняет своего значения
                 System.out.println(x2);
-                // System.out.println(x3); НЕЛЬЗЯ, так как x3 меняет значение
+                // System.out.println(x3); НЕЛЬЗЯ, так как
+                // x3 меняет значение
             }
 
             //... ещё методы.
