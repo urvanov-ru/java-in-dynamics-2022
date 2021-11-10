@@ -14,8 +14,6 @@ class ConstructorReference {
         return result;
     }
 
-
-
     public static void main(String[] args) {
         // Лямбда-выражение.
         ConstructorReference[] a1 = createArray(
