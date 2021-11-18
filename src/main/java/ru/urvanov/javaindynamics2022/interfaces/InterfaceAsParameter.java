@@ -7,8 +7,8 @@ public class InterfaceAsParameter {
             Enemy obstacleEnemy = (Enemy) obstacle;
             // остальные действия.
         }
-        // Объявляем переменную с типом интерфейса Monstr.
-        Monster monstr = null;
+        // Объявляем переменную с типом интерфейса Monster.
+        Monster monster = null;
 
         //...
     }
