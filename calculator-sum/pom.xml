@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>calculator-sum</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>ru.urvanov.javaindynamics2022</groupId>
+            <artifactId>calculator</artifactId>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

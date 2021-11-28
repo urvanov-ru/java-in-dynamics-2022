@@ -13,20 +13,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>16</source>
-                    <target>16</target>
-                </configuration>
+                <version>3.8.1</version>
             </plugin>
         </plugins>
     </build>
     <modules>
         <module>general</module>
-        <module>jigsaw</module>
-        <module>jigsaw-calculator</module>
-        <module>jigsaw-operation</module>
         <module>calculator</module>
-        <module>calculator-operation</module>
         <module>calculator-sum</module>
         <module>calculator-minus</module>
     </modules>
@@ -35,5 +28,16 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ru.urvanov.javaindynamics2022</groupId>
+                <artifactId>calculator</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>
