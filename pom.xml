@@ -6,6 +6,7 @@
 
     <groupId>ru.urvanov.javaindynamics2022</groupId>
     <artifactId>java-in-dynamics-2022</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,16 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>general</module>
+        <module>jigsaw</module>
+        <module>jigsaw-calculator</module>
+        <module>jigsaw-operation</module>
+        <module>calculator</module>
+        <module>calculator-operation</module>
+        <module>calculator-sum</module>
+        <module>calculator-minus</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
