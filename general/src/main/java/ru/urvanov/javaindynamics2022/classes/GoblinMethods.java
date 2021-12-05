@@ -33,27 +33,27 @@ public class GoblinMethods {
     // Примеры перегрузки методов
 
     public void hit(Axe axe) {
-        // ... operators
+        // ... инструкции...
     }
 
     public void hit(Flail flail) {
-        // ... operators
+        // ... инструкции...
     }
 
     public void hit(Scimitar scimitar) {
-        // ... operators
+        // ... инструкции...
     }
 
     public void hit(Torch torch) {
-        // ... operators
+        // ... инструкции...
     }
 
     public void hit(Sword sword) {
-        // ... operators
+        // ... инструкции...
     }
 
     public void hit(Sword sword, int comboCount) {
-        // ... operators
+        // ... инструкции...
     }
 
 
