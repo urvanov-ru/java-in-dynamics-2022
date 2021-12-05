@@ -3,7 +3,6 @@ package ru.urvanov.javaindynamics2022.calculator;
 import ru.urvanov.javaindynamics2022.calculator.plugin.Operation;
 
 import java.util.ServiceLoader;
-import java.util.stream.StreamSupport;
 
 public class Calculator {
     public static void main(String[] args) {

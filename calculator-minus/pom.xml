@@ -16,4 +16,10 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>ru.urvanov.javaindynamics2022</groupId>
+            <artifactId>calculator</artifactId>
+        </dependency>
+    </dependencies>
 </project>
