@@ -26,7 +26,7 @@ public class SwitchExpression1 {
         }
         System.out.println("moneyDescription = " + moneyDescription);
 
-        // Идентичный ему switch expression:
+        // Идентичное ему switch expression:
         switch (moneyType) {
             case 1, 2 -> moneyDescription = "Gold";
             case 3 -> moneyDescription = "Aden";

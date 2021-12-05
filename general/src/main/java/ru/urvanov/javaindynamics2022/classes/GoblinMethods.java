@@ -7,7 +7,7 @@ public class GoblinMethods {
     private int hitPoints;
     public int fire(boolean withAim, double windDirection,
                     double windPower) {
-        // some operators;
+        // ... инструкции...
         return hitPoints;
     }
 
