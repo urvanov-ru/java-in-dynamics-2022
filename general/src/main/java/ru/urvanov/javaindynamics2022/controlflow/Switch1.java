@@ -7,16 +7,16 @@ public class Switch1 {
 
         switch (mode) {
             case 0:
-                // operators for mode 0
+                // Инструкции для mode 0
                 break;
             case 1:
-                // operators for mode 1
+                // Инструкции для mode 1
                 break;
             case 2:
-                // operators for mode 2
+                // Инструкции для mode 2
                 break;
             default:
-                // operators for other mode
+                // Инструкции для остальных mode
                 break;
         }
 
