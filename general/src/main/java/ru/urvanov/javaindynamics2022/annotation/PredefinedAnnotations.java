@@ -6,7 +6,8 @@ public class PredefinedAnnotations extends ParentPredefinedAnnotations{
 
     /**
      * @deprecated
-     * explanation of why it was deprecated
+     * Объяснение, почему устарело, что использовать
+     * вместо устаревшего метода.
      */
     @Deprecated
     static void deprecatedMethod() { }
