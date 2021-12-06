@@ -1,13 +1,14 @@
 package ru.urvanov.javaindynamics2022.annotation;
 
+// Пример к разделу про аннотации
 class IceElemental {
-    // author : John Clark
-    // sprites : Izabella Simpson
-    // sound : Michael Lermontov
-    // code : Pushkin A.
-    // createdAt : 2016-03-30
-    // description : Ice elemental is a powerful creature from ice.
-    // comments :
+    // автор : Петров Иван
+    // художник : Ишова Джамиля
+    // звуки : Спиридонов Михаил
+    // программирование : Пушкин Александр
+    // дата создания : 30 марта 2016
+    // описание : Ледяной элементаль - это сильное существо из льда
+    // комментарии :
 
-    // ... code
+    // ... код
 }
