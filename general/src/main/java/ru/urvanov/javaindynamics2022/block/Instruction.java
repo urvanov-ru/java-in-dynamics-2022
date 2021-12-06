@@ -5,7 +5,7 @@ public class Instruction {
         float f1;
         int y = 0;
 
-        // Присвоение
+        // Присваивание
         f1 = 34.5f;
 
         // Инкремент
