@@ -8,6 +8,6 @@ package ru.urvanov.javaindynamics2022.annotation;
     String createdAt() default "0000-00-00";
     String description();
 
-    // Example of array use
+    // Пример использования массива
     String[] comments();
 }
