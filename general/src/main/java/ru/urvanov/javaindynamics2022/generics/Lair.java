@@ -20,5 +20,8 @@ class Lair<T> {
         goblinLair.setInhabitant(new Goblin());
         // Приведение типа уже не нужно.
         Goblin goblin = goblinLair.getInhabitant();
+
+        // Бриллиантовая операция
+        Lair<Goblin> goblinLair2 = new Lair<>();
     }
 }
