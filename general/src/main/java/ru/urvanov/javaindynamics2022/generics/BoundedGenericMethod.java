@@ -9,7 +9,8 @@ public class BoundedGenericMethod {
     }
 
     // Ограниченный обобщённый метод
-    public static <T extends Monster & Enemy & Dreadful> void doSomething(T[] monsters) {
+    public static <T extends Monster & Enemy & Dreadful>
+            void doSomething(T[] monsters) {
         T result = null;
         for (T obj : monsters) {
 
@@ -27,5 +28,6 @@ public class BoundedGenericMethod {
         for (int n = 0; n < foxSpirits.length; n++) {
             foxSpirits[n] = new BoundedGenericMethod.FoxSpirit();
         }
+        BoundedGenericMethod.doSomething(foxSpirits);
     }
 }
