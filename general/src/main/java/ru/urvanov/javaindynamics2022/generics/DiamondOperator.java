@@ -11,6 +11,7 @@ public class DiamondOperator {
 
         Map<String, List<String>> myMap2 = new HashMap<>();
 
-        Map<String, List<String>> myMap3 = new HashMap(); // unchecked conversion warning
+        Map<String, List<String>> myMap3 = new HashMap(); // unchecked
+                                   // conversion warning
     }
 }
