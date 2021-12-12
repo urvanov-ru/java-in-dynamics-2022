@@ -3,6 +3,7 @@ package ru.urvanov.javaindynamics2022.generics;
 import java.util.ArrayList;
 import java.util.List;
 
+// Наследование и подстановочные символы
 public class WildcardInheritance {
     public static void main(String[] args) {
         List<? extends Integer> intList = new ArrayList<>();
