@@ -14,7 +14,8 @@ public class ArrayBuilder {
     public static void faultyMethod(List<String>... lists) {
         Object[] objectArray = lists;     // Valid
         objectArray[0] = Arrays.asList(42);
-        String s = lists[0].get(0);       // Здесь генерируется ClassCastException
+        String s = lists[0].get(0);       // Здесь генерируется
+                                          // ClassCastException
     }
 
 }
