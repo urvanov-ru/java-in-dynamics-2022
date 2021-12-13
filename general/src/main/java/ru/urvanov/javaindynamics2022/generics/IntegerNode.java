@@ -7,4 +7,12 @@ public class IntegerNode extends Node<Integer> {
         System.out.println("MyNode.setData");
         super.setData(data);
     }
+
+    public static void main(String[] args) {
+        IntegerNode mn = new IntegerNode(5);
+        Node n = mn;            // Сырой тип - компилятор генерирует
+        // предупреждение unchecked warning
+        n.setData("Hello");
+        Integer x = mn.data;    // Исключение ClassCastException.
+    }
 }
