@@ -13,9 +13,11 @@ class TryWithResources {
         } catch (FileNotFoundException fnfe) {
             System.out.println("Cannot find the file.");
         } catch (IOException ioex) {
-            System.out.println("Error writing file: " + ioex.getMessage());
+            System.out.println("Error writing file: "
+                    + ioex.getMessage());
         }
-        // Блок finally уже не нужен, но можно использовать, если хочется.
+        // Блок finally уже не нужен, но можно
+        // использовать, если хочется.
 
         System.out.println("End of program.");
     }
