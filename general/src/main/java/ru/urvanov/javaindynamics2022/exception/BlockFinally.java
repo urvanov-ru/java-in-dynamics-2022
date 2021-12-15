@@ -14,7 +14,8 @@ class BlockFinally {
         } catch (FileNotFoundException fnfe) {
             System.out.println("Cannot find the file.");
         } catch (IOException ioex) {
-            System.out.println("Error writing file: " + ioex.getMessage());
+            System.out.println("Error writing file: "
+                    + ioex.getMessage());
         } finally {
             System.out.println("finally.");
             if (os != null) {
