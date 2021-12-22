@@ -2,3 +2,5 @@
 target
 .classpath
 .metadata
+output.file
+output.txt
