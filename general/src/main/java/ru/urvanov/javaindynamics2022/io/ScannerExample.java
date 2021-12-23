@@ -8,7 +8,9 @@ import java.util.Scanner;
 public class ScannerExample {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Введите целое число");
         int i = sc.nextInt();
+        System.out.println("Введите дробное число");
         double d = sc.nextDouble();
         // System.out - это PrintStream
         // Мы используем метод format, в качестве первого
