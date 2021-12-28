@@ -47,7 +47,8 @@ public class PrintFiles
 
 
     public static void main(String[] args) throws IOException {
-        Path startingDir = Paths.get("src");
+        // Вместо general/src подставить путь к свеому каталогу
+        Path startingDir = Paths.get("general/src");
         PrintFiles pf = new PrintFiles();
         Files.walkFileTree(startingDir, pf);
     }

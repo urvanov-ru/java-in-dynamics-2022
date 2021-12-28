@@ -6,7 +6,7 @@ import java.nio.file.*;
 public class DirectoryStreamExample {
     public static void main(String[] args) {
         // Подставьте сюда путь к каталогу вместо src
-        Path dir = Paths.get("src");
+        Path dir = Paths.get("general/src");
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
             for (Path file: stream) {
                 System.out.println(file.getFileName());
