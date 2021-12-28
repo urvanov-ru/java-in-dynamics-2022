@@ -1,9 +1,7 @@
 package ru.urvanov.javaindynamics2022.nio;
 
 import java.io.IOException;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
 import static java.nio.file.FileVisitResult.*;
@@ -45,5 +43,12 @@ public class PrintFiles
                                            IOException exc) {
         System.err.println(exc);
         return CONTINUE;
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        Path startingDir = Paths.get("src");
+        PrintFiles pf = new PrintFiles();
+        Files.walkFileTree(startingDir, pf);
     }
 }
