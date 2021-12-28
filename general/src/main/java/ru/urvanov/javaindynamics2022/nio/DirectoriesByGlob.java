@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class DirectoriesByGlobExample {
+public class DirectoriesByGlob {
     public static void main(String[] args) {
         // Подставьте сюда путь к каталогу вместо target/classes
         Path dir = Paths.get("target/classes");
