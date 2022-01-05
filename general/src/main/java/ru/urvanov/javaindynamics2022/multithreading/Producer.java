@@ -11,21 +11,21 @@ public class Producer implements Runnable {
 
     public void run() {
         String importantInfo[] = {
-                "Mares eat oats",
-                "Does eat oats",
-                "Little lambs eat ivy",
-                "A kid will eat ivy too"
+                "Однажды в студёную ",
+                "Зимнюю пору",
+                "Овечки шли на водопой",
+                "Они веселою гурьбою"
         };
         Random random = new Random();
 
-        for (int i = 0;
-             i < importantInfo.length;
-             i++) {
+        for (int i = 0; i < importantInfo.length; i++) {
             drop.put(importantInfo[i]);
             try {
                 Thread.sleep(random.nextInt(5000));
-            } catch (InterruptedException e) {}
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-        drop.put("DONE");
+        drop.put("FINISH");
     }
 }
