@@ -18,6 +18,8 @@ public class SimpleCompletableFuture {
         CompletableFuture<Void> future4 = CompletableFuture.runAsync(
                 () -> System.out.println("Test4"),
                 Executors.newCachedThreadPool());
+        future3.join();
+        future4.join();
 
 
 
@@ -39,5 +41,17 @@ public class SimpleCompletableFuture {
                 .thenRun(() -> System.out.println("Computation finished."));
 
         futureThenRun.get();
+
+
+        // thenApply
+        CompletableFuture<Integer> futureThenApply
+                = CompletableFuture.supplyAsync(() -> 2);
+
+        futureThenApply.thenApply(result -> result + 3);
+
+        futureThenApply.thenApply(result -> result -1);
+
+        Integer futureThenApplyResult = futureThenApply.get();
+        System.out.println(futureThenApplyResult);
     }
 }
