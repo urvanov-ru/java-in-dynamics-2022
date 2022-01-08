@@ -1,5 +1,7 @@
 package ru.urvanov.javaindynamics2022.multithreading;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
@@ -53,5 +55,47 @@ public class SimpleCompletableFuture {
 
         Integer futureThenApplyResult = futureThenApply.get();
         System.out.println(futureThenApplyResult);
+
+
+
+        // allOf
+        List<CompletableFuture<Void>> allOf = new ArrayList<>();
+        allOf.add(CompletableFuture.runAsync(() -> {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("allOfTaskOne");
+        }));
+        allOf.add(CompletableFuture.runAsync(() -> {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("allOfTaskTwo");
+        }));
+        CompletableFuture.allOf(allOf.toArray(new CompletableFuture[allOf.size()])).join();
+
+        // anyOf
+        List<CompletableFuture<Void>> anyOf = new ArrayList<>();
+        anyOf.add(CompletableFuture.runAsync(() -> {
+            try {
+                Thread.sleep(120);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("anyOfTaskOne");
+        }));
+        anyOf.add(CompletableFuture.runAsync(() -> {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("anyOfTaskTwo");
+        }));
+        CompletableFuture.allOf(anyOf.toArray(new CompletableFuture[anyOf.size()])).join();
     }
 }
