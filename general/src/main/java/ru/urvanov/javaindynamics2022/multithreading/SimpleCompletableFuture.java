@@ -25,10 +25,10 @@ public class SimpleCompletableFuture {
         CompletableFuture<String> completableFutureThenAccept
                 = CompletableFuture.supplyAsync(() -> "Hello");
 
-        CompletableFuture<Void> futurethenAccept = completableFutureThenAccept
+        CompletableFuture<Void> futureThenAccept = completableFutureThenAccept
                 .thenAccept(s -> System.out.println("Computation returned: " + s));
 
-        futurethenAccept.get();
+        futureThenAccept.get();
 
 
         // thenRun
