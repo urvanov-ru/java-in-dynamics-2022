@@ -10,7 +10,11 @@ public class ForkAbs extends RecursiveAction {
     private int start;
     private int length;
 
-    public ForkAbs(int[] source, int start, int length, int[] destination) {
+    public ForkAbs(
+            int[] source,
+            int start,
+            int length,
+            int[] destination) {
         this.source = source;
         this.start = start;
         this.length = length;
@@ -18,7 +22,8 @@ public class ForkAbs extends RecursiveAction {
     }
 
     private void computeDirectly() {
-        // Это только пример. В реальности здесь могут быть довольно сложные вычисления.
+        // Это только пример. В реальности здесь
+        // могут быть довольно сложные вычисления.
         for (int n = start; n < start + length; n++) {
             destination[n] = Math.abs(source[n]);
         }
@@ -36,7 +41,11 @@ public class ForkAbs extends RecursiveAction {
 
         int split = length / 2;
         invokeAll(new ForkAbs(source, start, split, destination),
-                new ForkAbs(source, start + split, length - split, destination));
+                new ForkAbs(
+                        source,
+                        start + split,
+                        length - split,
+                        destination));
     }
 
     public static void main(String[] args) {
