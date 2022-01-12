@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 // Простой пример использования регулярного выражения
 public class SimpleRegex {
     public static void main(String[] args) {
-        Pattern pattern = Pattern.compile("\\d\\d [a-z|A-Z]{2}");
+        Pattern pattern = Pattern.compile("\\d\\d [a-zA-Z]{2}");
         Matcher matcher1 = pattern.matcher("12 df");
         if (matcher1.matches()) {
             System.out.println("first matches");
