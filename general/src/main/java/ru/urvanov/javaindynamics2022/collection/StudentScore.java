@@ -51,4 +51,14 @@ public final class StudentScore implements Comparable<StudentScore> {
         double averageScoreOther = otherStudentScore.averageScore();
         return Double.compare(averageScoreThis, averageScoreOther);
     }
+
+    @Override
+    public String toString() {
+        return "StudentScore{" +
+                "name='" + name + '\'' +
+                ", math=" + math +
+                ", physics=" + physics +
+                ", philosophy=" + philosophy +
+                '}';
+    }
 }
