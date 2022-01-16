@@ -11,7 +11,8 @@ public class StudentSort {
                 new StudentScore("John", 5, 5, 5),
                 new StudentScore("Tom", 2, 2, 2)
         };
-        List<StudentScore> studentScoreList = Arrays.asList(studentScoreArray);
+        List<StudentScore> studentScoreList
+                = Arrays.asList(studentScoreArray);
         Collections.sort(studentScoreList);
         System.out.println(studentScoreList);
     }
