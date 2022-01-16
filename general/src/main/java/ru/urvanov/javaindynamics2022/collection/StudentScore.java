@@ -44,6 +44,9 @@ public final class StudentScore implements Comparable<StudentScore> {
 
     @Override
     public int compareTo(StudentScore otherStudentScore) {
+        if (otherStudentScore == null) {
+            throw new NullPointerException();
+        }
         double averageScoreThis = averageScore();
         double averageScoreOther = otherStudentScore.averageScore();
         return Double.compare(averageScoreThis, averageScoreOther);
