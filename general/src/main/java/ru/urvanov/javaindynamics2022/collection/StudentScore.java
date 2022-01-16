@@ -2,7 +2,7 @@ package ru.urvanov.javaindynamics2022.collection;
 
 import java.util.Objects;
 
-public class StudentScore implements Comparable<StudentScore> {
+public final class StudentScore implements Comparable<StudentScore> {
     private final String name;
     private final int math;
     private final int physics;
