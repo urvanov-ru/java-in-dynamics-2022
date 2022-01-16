@@ -8,7 +8,14 @@ public final class StudentScore implements Comparable<StudentScore> {
     private final int physics;
     private final int philosophy;
 
-    public StudentScore(String name, int math, int physics, int philosophy) {
+    public StudentScore(
+            String name,
+            int math,
+            int physics,
+            int philosophy) {
+        if (name == null) {
+            throw new NullPointerException();
+        }
         this.name = name;
         this.math = math;
         this.physics = physics;
