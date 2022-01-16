@@ -24,7 +24,10 @@ public class StudentScore implements Comparable<StudentScore> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StudentScore that = (StudentScore) o;
-        return math == that.math && physics == that.physics && philosophy == that.philosophy && Objects.equals(name, that.name);
+        return math == that.math
+                && physics == that.physics
+                && philosophy == that.philosophy
+                && Objects.equals(name, that.name);
     }
 
     @Override
