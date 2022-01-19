@@ -2,6 +2,7 @@ package ru.urvanov.javaindynamics2022.collection;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 
 public class Hobgoblin {
 
@@ -83,11 +84,31 @@ public class Hobgoblin {
         System.out.println();
 
         System.out.println("Среднее количество золота у всех домовых:");
-        hobgoblins
+        OptionalDouble average = hobgoblins
                 .stream()
                 .mapToInt(Hobgoblin::getGold)
                 .average();
+        System.out.println("average gold: " + average.getAsDouble());
 
         System.out.println();
+
+
+        System.out.println("Сумма золота у всех домовых:");
+        int sum1 = hobgoblins
+                .stream()
+                .mapToInt(Hobgoblin::getGold)
+                .sum();
+        System.out.println("sum1: " + sum1);
+        int sum2 = hobgoblins
+                .stream()
+                .map(Hobgoblin::getGold)
+                .reduce(0, (a, b) -> a + b);
+        System.out.println("sum2: " + sum2);
+
+
+
+        System.out.println();
+
+
     }
 }
