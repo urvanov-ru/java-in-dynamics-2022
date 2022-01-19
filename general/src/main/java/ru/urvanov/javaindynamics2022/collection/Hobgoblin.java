@@ -3,13 +3,13 @@ package ru.urvanov.javaindynamics2022.collection;
 import java.time.LocalDate;
 
 public class Hobgoblin {
-    public enum Sex {
+    public enum Gender {
         MALE, FEMALE
     }
 
     String name;
     LocalDate birthdate;
-    Sex gender;
+    Gender gender;
     int gold;
     double health = 100.0;
     double power = 30.0;
@@ -30,11 +30,11 @@ public class Hobgoblin {
         this.birthdate = birthdate;
     }
 
-    public Sex getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(Sex gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
