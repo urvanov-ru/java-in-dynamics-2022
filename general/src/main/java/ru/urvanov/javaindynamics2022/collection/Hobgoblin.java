@@ -81,5 +81,13 @@ public class Hobgoblin {
                 .forEach(System.out::println);
 
         System.out.println();
+
+        System.out.println("Среднее количество золота у всех домовых:");
+        hobgoblins
+                .stream()
+                .mapToInt(Hobgoblin::getGold)
+                .average();
+
+        System.out.println();
     }
 }
