@@ -3,6 +3,7 @@ package ru.urvanov.javaindynamics2022.collection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 
 public class Hobgoblin {
 
@@ -92,7 +93,6 @@ public class Hobgoblin {
 
         System.out.println();
 
-
         System.out.println("Сумма золота у всех домовых:");
         int sum1 = hobgoblins
                 .stream()
@@ -105,6 +105,7 @@ public class Hobgoblin {
                 .reduce(0, (a, b) -> a + b);
         System.out.println("sum2: " + sum2);
 
+        System.out.println();
 
         System.out.println("Преобразуем в объединённого богатого домового:");
         HobgoblinMorph hobgoblinMorph = hobgoblins.stream()
@@ -114,6 +115,11 @@ public class Hobgoblin {
                                 HobgoblinMorph::combine);
         System.out.println(hobgoblinMorph.morph());
 
+        System.out.println();
+
+        List<Integer> hobgoblinGolds = hobgoblins.stream()
+                .map(Hobgoblin::getGold)
+                .collect(Collectors.toList());
 
         System.out.println();
 
