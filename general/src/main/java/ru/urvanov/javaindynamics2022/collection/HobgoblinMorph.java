@@ -15,33 +15,9 @@ public class HobgoblinMorph implements Consumer<Hobgoblin> {
     }
 
     public void combine(HobgoblinMorph hobgoblinMorph) {
-        this.gold += hobgoblinMorph.getGold();
-        this.power += hobgoblinMorph.getPower();
-        this.count += hobgoblinMorph.getCount();
-    }
-
-    public int getGold() {
-        return gold;
-    }
-
-    public void setGold(int gold) {
-        this.gold = gold;
-    }
-
-    public double getPower() {
-        return power;
-    }
-
-    public void setPower(double power) {
-        this.power = power;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
+        this.gold += hobgoblinMorph.gold;
+        this.power += hobgoblinMorph.power;
+        this.count += hobgoblinMorph.count;
     }
 
     public Hobgoblin morph() {
