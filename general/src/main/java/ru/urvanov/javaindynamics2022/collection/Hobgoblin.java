@@ -106,6 +106,14 @@ public class Hobgoblin {
         System.out.println("sum2: " + sum2);
 
 
+        System.out.println("Преобразуем в объединённого богатого домового:");
+        HobgoblinMorph hobgoblinMorph = hobgoblins.stream()
+                        .collect(
+                                HobgoblinMorph::new,
+                                HobgoblinMorph::accept,
+                                HobgoblinMorph::combine);
+        System.out.println(hobgoblinMorph.morph());
+
 
         System.out.println();
 
