@@ -20,7 +20,12 @@ public class Hobgoblin {
         ARCHER
     }
 
-    public Hobgoblin(String name, Role role, int gold, double health, double power) {
+    public Hobgoblin(
+            String name,
+            Role role,
+            int gold,
+            double health,
+            double power) {
         this.name = name;
         this.role = role;
         this.gold = gold;
