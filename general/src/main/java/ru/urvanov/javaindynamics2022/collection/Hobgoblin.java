@@ -161,5 +161,8 @@ public class Hobgoblin {
                 .mapToInt(Hobgoblin::getGold)
                 .sum();
         System.out.println("parallelSumGold = " + parallelSumGold);
+
+        Map<Role, List<Hobgoblin>> parallelGroupedHobgoblins = hobgoblins.stream()
+                .collect(Collectors.groupingByConcurrent(Hobgoblin::getRole));
     }
 }
