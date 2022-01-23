@@ -2,18 +2,27 @@ package ru.urvanov.javaindynamics2022.collection;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 
 public class Hobgoblin {
 
     private String name;
+    private Role role;
     private int gold;
     private double health = 100.0;
     private double power = 30.0;
 
-    public Hobgoblin(String name, int gold, double health, double power) {
+    public enum Role {
+        WARRIOR,
+        MAGE,
+        ARCHER
+    }
+
+    public Hobgoblin(String name, Role role, int gold, double health, double power) {
         this.name = name;
+        this.role = role;
         this.gold = gold;
         this.health = health;
         this.power = power;
@@ -25,6 +34,14 @@ public class Hobgoblin {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public int getGold() {
@@ -63,11 +80,11 @@ public class Hobgoblin {
 
     public static void main(String[] args) {
         List<Hobgoblin> hobgoblins = new ArrayList<>();
-        hobgoblins.add(new Hobgoblin("Ужасный Фро", 2, 99, 31));
-        hobgoblins.add(new Hobgoblin("Стареющий Эд", 23, 36, 12));
-        hobgoblins.add(new Hobgoblin("Богатейший Джолливер", 300, 80, 25));
-        hobgoblins.add(new Hobgoblin("Дохляк Эрни", 6, 88, 15));
-        hobgoblins.add(new Hobgoblin("Бледный Сэм", 59, 60, 15));
+        hobgoblins.add(new Hobgoblin("Ужасный Фро", Role.MAGE, 2, 99, 31));
+        hobgoblins.add(new Hobgoblin("Стареющий Эд", Role.WARRIOR, 23, 36, 12));
+        hobgoblins.add(new Hobgoblin("Богатейший Джолливер", Role.MAGE, 300, 80, 25));
+        hobgoblins.add(new Hobgoblin("Дохляк Эрни", Role.ARCHER, 6, 88, 15));
+        hobgoblins.add(new Hobgoblin("Бледный Сэм", Role.WARRIOR, 59, 60, 15));
 
         System.out.println("Список домовых:");
         for (Hobgoblin hobgoblin : hobgoblins) {
@@ -123,6 +140,8 @@ public class Hobgoblin {
 
         System.out.println();
 
+        Map<Role, List<Hobgoblin>> groupedHobgoblins = hobgoblins.stream()
+                .collect(Collectors.groupingBy(Hobgoblin::getRole));
 
     }
 }

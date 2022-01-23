@@ -21,7 +21,7 @@ public class HobgoblinMorph implements Consumer<Hobgoblin> {
     }
 
     public Hobgoblin morph() {
-        return new Hobgoblin("WeatlhyHobgoblin", gold, 100.0, power / count);
+        return new Hobgoblin("WeatlhyHobgoblin", Hobgoblin.Role.WARRIOR, gold, 100.0, power / count);
     }
 
 }
