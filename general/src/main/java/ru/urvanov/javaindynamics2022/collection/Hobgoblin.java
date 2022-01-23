@@ -160,5 +160,6 @@ public class Hobgoblin {
                 .filter(v -> Role.MAGE == v.getRole())
                 .mapToInt(Hobgoblin::getGold)
                 .sum();
+        System.out.println("parallelSumGold = " + parallelSumGold);
     }
 }
