@@ -148,5 +148,11 @@ public class Hobgoblin {
         Map<Role, List<Hobgoblin>> groupedHobgoblins = hobgoblins.stream()
                 .collect(Collectors.groupingBy(Hobgoblin::getRole));
 
+
+        Map<Role, Integer> groupedHobgoblinsGold = hobgoblins.stream()
+                .collect(Collectors.groupingBy(
+                        Hobgoblin::getRole,
+                        Collectors.summingInt(Hobgoblin::getGold)));
+
     }
 }
