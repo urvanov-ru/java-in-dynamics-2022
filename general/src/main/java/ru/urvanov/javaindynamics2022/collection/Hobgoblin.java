@@ -154,5 +154,11 @@ public class Hobgoblin {
                         Hobgoblin::getRole,
                         Collectors.summingInt(Hobgoblin::getGold)));
 
+
+        int parallelSumGold = hobgoblins
+                .parallelStream()
+                .filter(v -> Role.MAGE == v.getRole())
+                .mapToInt(Hobgoblin::getGold)
+                .sum();
     }
 }
