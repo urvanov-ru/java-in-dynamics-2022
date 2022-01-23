@@ -115,6 +115,10 @@ public class Hobgoblin {
 
         System.out.println();
 
+        System.out.println("findAny result: " + hobgoblins.stream().findAny());
+
+        System.out.println();
+
         System.out.println("Сумма золота у всех домовых:");
         int sum1 = hobgoblins
                 .stream()
