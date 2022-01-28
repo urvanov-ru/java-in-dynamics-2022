@@ -11,7 +11,9 @@ public class MonthExample {
         // Либо вариант getDisplayName без указания локали
         Locale locale = new Locale("ru", "RU");
         System.out.println(month.getDisplayName(TextStyle.FULL, locale));
-        System.out.println(month.getDisplayName(TextStyle.NARROW, locale));
-        System.out.println(month.getDisplayName(TextStyle.SHORT, locale));
+        System.out.println(month.getDisplayName(
+                TextStyle.NARROW, locale));
+        System.out.println(month.getDisplayName(
+                TextStyle.SHORT, locale));
     }
 }
