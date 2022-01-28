@@ -7,6 +7,8 @@ import java.util.Locale;
 public class DayOfWeekExample {
     public static void main(String[] args) {
         DayOfWeek dow = DayOfWeek.MONDAY;
+        // Можно использовать Locale.getDefault()
+        // Либо вариант getDisplayName без указания локали
         Locale locale = new Locale("ru", "RU");
         System.out.println(dow.getDisplayName(TextStyle.FULL, locale));
         System.out.println(dow.getDisplayName(TextStyle.NARROW, locale));
