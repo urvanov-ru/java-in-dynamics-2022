@@ -13,5 +13,9 @@ public class DayOfWeekExample {
         System.out.println(dow.getDisplayName(TextStyle.FULL, locale));
         System.out.println(dow.getDisplayName(TextStyle.NARROW, locale));
         System.out.println(dow.getDisplayName(TextStyle.SHORT, locale));
+
+        // Прибавляем два дня
+        DayOfWeek dowPlusTwo = dow.plus(2);
+        System.out.println(dowPlusTwo.getDisplayName(TextStyle.FULL, locale));
     }
 }
