@@ -15,5 +15,10 @@ public class MonthExample {
                 TextStyle.NARROW, locale));
         System.out.println(month.getDisplayName(
                 TextStyle.SHORT, locale));
+
+        // Месяц, который был три месяца назад
+        Month monthBeforeThree = month.minus(3);
+        System.out.println(monthBeforeThree.getDisplayName(
+                TextStyle.FULL, locale));
     }
 }
