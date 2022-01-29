@@ -11,5 +11,8 @@ public class LocalDateTimeExample {
         LocalDateTime localDateTime = LocalDateTime.of(
                 2022, Month.NOVEMBER, 10, 12, 30, 0);
         System.out.println(localDateTime);
+
+        LocalDateTime localDateTime2 = localDateTimeNow.plusDays(3).minusMonths(4).plusYears(2);
+        System.out.println(localDateTime2);
     }
 }
