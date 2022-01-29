@@ -13,5 +13,8 @@ public class OffsetDateTimeExample {
 
         OffsetDateTime offsetDate = OffsetDateTime.of(localDate, offset);
         System.out.println(offsetDate);
+
+        OffsetDateTime offsetDate3 = offsetDate.plusDays(3).minusHours(4);
+        System.out.println(offsetDate3);
     }
 }
