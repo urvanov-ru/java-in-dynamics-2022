@@ -11,5 +11,6 @@ public class OffsetDateTimeExample {
         ZoneOffset offset = ZoneOffset.of("+04:00");
 
         OffsetDateTime offsetDate = OffsetDateTime.of(localDate, offset);
+        System.out.println(offsetDate);
     }
 }
