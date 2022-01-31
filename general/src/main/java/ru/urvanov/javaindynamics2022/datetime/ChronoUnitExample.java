@@ -1,7 +1,6 @@
 package ru.urvanov.javaindynamics2022.datetime;
 
 import java.time.Instant;
-import java.time.temporal.Temporal;
 import java.time.temporal.ChronoUnit;
 
 public class ChronoUnitExample {
