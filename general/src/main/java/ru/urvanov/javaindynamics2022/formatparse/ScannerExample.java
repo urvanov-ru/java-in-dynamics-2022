@@ -9,7 +9,10 @@ public class ScannerExample {
         Scanner s = null;
 
         try {
-            s = new Scanner(new BufferedReader(new FileReader("scanner-data.txt", StandardCharsets.UTF_8)));
+            s = new Scanner(new BufferedReader(
+                    new FileReader(
+                            "scanner-data.txt",
+                            StandardCharsets.UTF_8)));
 
             while (s.hasNext()) {
                 System.out.println(s.next());
