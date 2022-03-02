@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/creatures")
 public class CreaturesController {
 
-    private Logger logger = LoggerFactory.getLogger(CreaturesController.class);
+    private Logger logger
+            = LoggerFactory.getLogger(CreaturesController.class);
 
     @PostMapping
     public void create() {
