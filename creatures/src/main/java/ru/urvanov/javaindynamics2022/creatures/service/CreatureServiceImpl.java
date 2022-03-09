@@ -21,8 +21,8 @@ public class CreatureServiceImpl implements CreatureService {
 
     @Override
     @Transactional
-    public void update(Creature creature) {
-        creatureRepository.save(creature);
+    public Mono<Creature> update(Creature creature) {
+        return creatureRepository.save(creature);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class CreatureServiceImpl implements CreatureService {
 
     @Override
     @Transactional
-    public void delete(Long creatureId) {
-        creatureRepository.deleteById(creatureId);
+    public Mono<Void> delete(Long creatureId) {
+        return creatureRepository.deleteById(creatureId);
     }
 }

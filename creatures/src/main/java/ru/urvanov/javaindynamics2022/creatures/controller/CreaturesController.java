@@ -25,10 +25,11 @@ public class CreaturesController {
     }
 
     @PutMapping("{creatureId}")
-    public void update(@PathVariable Long creatureId, @RequestBody Creature creature) {
+    public Mono<Void> update(@PathVariable Long creatureId, @RequestBody Creature creature) {
         logger.debug("Обновление информации о существе");
         creature.setId(creatureId);
         creatureService.update(creature);
+        return Mono.empty();
     }
 
     @GetMapping("{creatureId}")
@@ -38,8 +39,8 @@ public class CreaturesController {
     }
 
     @DeleteMapping("{creatureId}")
-    public void delete(@PathVariable Long creatureId) {
+    public Mono<Void> delete(@PathVariable Long creatureId) {
         logger.debug("Удаление существа");
-        creatureService.delete(creatureId);
+        return creatureService.delete(creatureId);
     }
 }
