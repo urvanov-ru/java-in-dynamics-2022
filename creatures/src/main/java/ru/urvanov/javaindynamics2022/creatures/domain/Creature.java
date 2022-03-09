@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
+import javax.annotation.processing.Generated;
 import java.util.Objects;
 
 @Table("creature")
