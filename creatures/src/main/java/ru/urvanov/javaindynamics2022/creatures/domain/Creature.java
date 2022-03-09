@@ -1,8 +1,14 @@
 package ru.urvanov.javaindynamics2022.creatures.domain;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
 import java.util.Objects;
 
+@Table("creature")
 public class Creature {
+    @Id
     private long id;
     private double health;
     private double x;
