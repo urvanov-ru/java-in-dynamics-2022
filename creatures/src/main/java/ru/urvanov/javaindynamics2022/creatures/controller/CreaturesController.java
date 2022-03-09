@@ -40,5 +40,6 @@ public class CreaturesController {
     @DeleteMapping("{creatureId}")
     public void delete(@PathVariable Long creatureId) {
         logger.debug("Удаление существа");
+        creatureService.delete(creatureId);
     }
 }
