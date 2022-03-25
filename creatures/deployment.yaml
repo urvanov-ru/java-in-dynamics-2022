@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: java-in-dynamics2022-creatures
+  name: java-in-dynamics2022-creatures
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-in-dynamics2022-creatures
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: java-in-dynamics2022-creatures
+    spec:
+      containers:
+      - image: urvanovru/java-in-dynamics2022-creatures
+        name: java-in-dynamics2022-creatures
+        imagePullPolicy: Never
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: java-in-dynamics2022-creatures
+  name: java-in-dynamics2022-creatures
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: java-in-dynamics2022-creatures
+  type: ClusterIP
+status:
+  loadBalancer: {}
