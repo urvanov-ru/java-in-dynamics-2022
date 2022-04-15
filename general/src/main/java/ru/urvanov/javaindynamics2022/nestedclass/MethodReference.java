@@ -21,7 +21,8 @@ class MethodReference {
         }
     }
 
-    static double[] massOperation(double[] a, double[] b, Operation operation) {
+    static double[] massOperation(
+            double[] a, double[] b, Operation operation) {
         double[] result = new double[a.length];
         for (int n = 0; n < a.length; n++ ) {
             result[n] = operation.method1(a[n], b[n]);
@@ -32,7 +33,8 @@ class MethodReference {
     public static void main (String[] args) {
         double[] a = {1.0, 2.2, 3.1};
         double[] b = {3.2, 4.1, 9.3};
-        final OperationProvider myOperationProvider = new OperationProvider();
+        final OperationProvider myOperationProvider
+                = new OperationProvider();
 
         massOperation(a, b, (x, y) -> OperationProvider.staticSum(x, y));
         massOperation(a, b, (x, y) -> myOperationProvider.instanceMinus(x, y));
