@@ -15,13 +15,14 @@ public class StringCompare {
         // Collator.getInstance();
 
         String str1 = "Ёжик";
-        String str2 = "Ежик";
+        String str2 = "ежик";
 
         // С помощью значений PRIMARY, SECONDARY, TERTIARY or IDENTICAL
         // можно настраивать минимальный уровень различий.
         // Для разных языков и стран каждое из значений имеет свой смысл.
-        // В данном случае для русского языка при PRIMARY буквы Ё и Е будут
-        // считаться идентичными, поэтому str1 будет идентична str2.
+        // В данном случае для русского языка при PRIMARY буквы "Ё" и "Е" будут
+        // считаться идентичными, а также не будет учитываться регистр букв,
+        // поэтому str1 будет идентична str2.
         collator.setStrength(Collator.PRIMARY);
 
         int result = collator.compare(str1, str2);
