@@ -1,5 +1,6 @@
 package ru.urvanov.javaindynamics2022.generics;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class WildcardEngineExample {
@@ -35,4 +36,5 @@ public class WildcardEngineExample {
         // Нельзя ошибка компиляции
         // l2.set(0, ant);
     }
+
 }
