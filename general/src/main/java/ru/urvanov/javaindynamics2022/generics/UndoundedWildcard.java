@@ -1,5 +1,6 @@
 package ru.urvanov.javaindynamics2022.generics;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class UndoundedWildcard {
     }
 
     public static void main(String[] args) {
-        List<Integer> li = Arrays.asList(1, 2, 3);
+        List<BigDecimal> li = Arrays.asList(new BigDecimal("100.01"), new BigDecimal("200.3"));
         List<String>  ls = Arrays.asList("one", "two", "three");
         printList(li);
         printList(ls);
