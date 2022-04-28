@@ -16,8 +16,10 @@ public class FileChannelExample {
 
         ByteBuffer copy = ByteBuffer.allocate(12);
 
-        // Вместо output.txt укажите имя существующего файла (его содержимое будет изменено)
-        try (FileChannel fc = (FileChannel.open(Paths.get("output.txt"), READ, WRITE))) {
+        // Вместо output.txt укажите имя существующего файла
+        // (его содержимое будет изменено)
+        try (FileChannel fc = FileChannel.open(
+                Paths.get("output.txt"), READ, WRITE)) {
             // Читаем первые 12
             // байт из файла.
             int nread;
