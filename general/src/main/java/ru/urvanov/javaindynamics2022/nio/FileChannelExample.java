@@ -10,7 +10,7 @@ import static java.nio.file.StandardOpenOption.WRITE;
 
 public class FileChannelExample {
     public static void main(String[] args) {
-        String s = "I was here!\n";
+        String s = "Моя добавленная строчка\n";
         byte data[] = s.getBytes();
         ByteBuffer out = ByteBuffer.wrap(data);
 
@@ -25,14 +25,14 @@ public class FileChannelExample {
                 nread = fc.read(copy);
             } while (nread != -1 && copy.hasRemaining());
 
-            // Пишем "I was here!" в начало файла.
+            // Пишем "Моя добавленная строчка" в начало файла.
             fc.position(0);
             while (out.hasRemaining())
                 fc.write(out);
             out.rewind();
 
             // Перемещаемся в конец файла. Копируем первые 12 байт в
-            // конец файла.  Пишем "I was here!" снова.
+            // конец файла.  Пишем "Моя добавленная строчка" снова.
             long length = fc.size();
             fc.position(length-1);
             copy.flip();
