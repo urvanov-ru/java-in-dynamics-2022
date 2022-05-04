@@ -1,24 +1,38 @@
 package ru.urvanov.javaindynamics2022.generics;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class HeapPollutionExample {
 
     public static void main(String[] args) {
 
-        List<String> stringListA = new ArrayList<String>();
-        List<String> stringListB = new ArrayList<String>();
+        List<Nymph> stringListA = new ArrayList<>();
+        List<Nymph> stringListB = new ArrayList<>();
 
-        ArrayBuilder.addToList(stringListA, "Seven", "Eight", "Nine");
-        ArrayBuilder.addToList(stringListB, "Ten", "Eleven", "Twelve");
-        List<List<String>> listOfStringLists =
-                new ArrayList<List<String>>();
-        ArrayBuilder.addToList(listOfStringLists,
+        FantasyWorldEngine.union(stringListA,
+                new Nymph("Эльза"),
+                new Nymph("Мария"),
+                new Nymph("Яна"),
+                new Nymph("Оксана"));
+        FantasyWorldEngine.union(stringListB,
+                new Nymph("Джамиля"),
+                new Nymph("Конни"),
+                new Nymph("Екатерина"),
+                new Nymph("Алиса"));
+        List<List<Nymph>> listOfNymphLists =
+                new ArrayList<>();
+        FantasyWorldEngine.union(listOfNymphLists,
                 stringListA, stringListB);
 
-        ArrayBuilder.faultyMethod(Arrays.asList("Hello!"),
-                Arrays.asList("World!"));
+        // Выйдет ошибка, так как внутри метода вставляем строку
+        // внутрь списка Нимф, а потом при попытке вытащить его оттуда
+        // получаем ошибку.
+        FantasyWorldEngine.invalid(
+                List.of(
+                        new Nymph("Конни"),
+                        new Nymph("Эльвира")),
+                List.of(new Nymph("Джамиля"),
+                        new Nymph("Яна")));
     }
 }
