@@ -1,17 +1,42 @@
 package ru.urvanov.javaindynamics2022.multithreading;
 
 public class SynchronizedCounter {
-    private int c = 0;
+    private int value = 0;
 
-    public synchronized void increment() {
-        c++;
+    public void increment100000() {
+        for (int n = 0; n < 100_000; n++) {
+            increment();
+        }
     }
 
-    public synchronized void decrement() {
-        c--;
+    private synchronized void increment() {
+        value++;
     }
 
-    public synchronized int value() {
-        return c;
+    public synchronized void decrement100000() {
+        for (int n = 0; n < 100_000; n++) {
+            decrement();
+        }
+    }
+
+    private synchronized void decrement() {
+        value--;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        SynchronizedCounter counter = new SynchronizedCounter();
+        Thread threadIncrement = new Thread(counter::increment100000);
+        Thread threadDecrement = new Thread(counter::decrement100000);
+        threadIncrement.start();
+        threadDecrement.start();
+        threadIncrement.join();
+        threadDecrement.join();
+        // Результат будет 0, так как методы
+        // increment и decrement синхронизированы.
+        System.out.println(counter.getValue());
+    }
+
+    private int getValue() {
+        return value;
     }
 }
