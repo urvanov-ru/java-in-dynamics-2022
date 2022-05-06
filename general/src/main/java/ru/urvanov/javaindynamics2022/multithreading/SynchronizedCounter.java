@@ -13,7 +13,7 @@ public class SynchronizedCounter {
         value++;
     }
 
-    public synchronized void decrement100000() {
+    public void decrement100000() {
         for (int n = 0; n < 100_000; n++) {
             decrement();
         }
