@@ -18,9 +18,9 @@ public class InterruptJoinExample {
             try {
                 for (int n = 0; n < 5; n++) {
                     // Ждём 2 секунды
-                    Thread.sleep(50_000);
+                    Thread.sleep(2_000);
                     // Выводим значение счетчика цикла
-                    System.out.println(n);
+                    writeMessage("counter " + n);
                 }
             } catch (InterruptedException interruptedException) {
                 writeMessage("Thread interrupted");
@@ -42,13 +42,13 @@ public class InterruptJoinExample {
         while (t.isAlive()) {
             writeMessage("calling join...");
             // Ждём максимум 1 секунду
-            // завершения потока MessageLoop
+            // завершения потока Counter
             t.join(1_000);
 
-            // максимально ждём одну минуту
+            // максимально 10 секунд
             // Если поток не успел, то посылаем ему сигнал
             // прерывания
-            if (((System.currentTimeMillis() - startTime) > 60000)
+            if (((System.currentTimeMillis() - startTime) > 10000)
                     && t.isAlive()) {
                 writeMessage("Interrupting...");
                 t.interrupt();
