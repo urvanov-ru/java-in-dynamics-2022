@@ -8,10 +8,11 @@ import java.util.concurrent.Executors;
 
 public class SimpleCompletableFuture {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        CompletableFuture<String> future1 = CompletableFuture
-                .supplyAsync(() -> "Test1");
-        CompletableFuture<String> future2 = CompletableFuture
-                .supplyAsync(() -> "Test2", Executors.newCachedThreadPool());
+        CompletableFuture<String> future1
+                = CompletableFuture.supplyAsync(() -> "Test1");
+        CompletableFuture<String> future2
+                = CompletableFuture
+                        .supplyAsync(() -> "Test2", Executors.newCachedThreadPool());
         System.out.println(future1.get());
         System.out.println(future2.get());
 
