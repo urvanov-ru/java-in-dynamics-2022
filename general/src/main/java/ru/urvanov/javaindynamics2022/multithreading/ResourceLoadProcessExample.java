@@ -43,7 +43,8 @@ public class ResourceLoadProcessExample {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        ResourceLoadProcessExample resourceLoadProcessExample = new ResourceLoadProcessExample();
+        ResourceLoadProcessExample resourceLoadProcessExample
+                = new ResourceLoadProcessExample();
 
 
         Thread processor = new Thread(() -> {
@@ -54,7 +55,8 @@ public class ResourceLoadProcessExample {
                 if (resource == null) {
                     workMore = false;
                 } else {
-                    System.out.println("Processing resource: " + Arrays.toString(resource));
+                    System.out.println("Processing resource: "
+                            + Arrays.toString(resource));
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
