@@ -15,7 +15,7 @@ public class DurationExample {
 
         Instant start = Instant.now();
 
-        Duration gap = Duration.ofSeconds(10);
+        Duration gap = Duration.ofSeconds(33);
         Instant later = start.plus(gap);
     }
 }

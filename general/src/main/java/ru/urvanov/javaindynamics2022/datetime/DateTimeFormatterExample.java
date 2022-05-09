@@ -33,7 +33,7 @@ public class DateTimeFormatterExample {
         String formattedShort = zonedDateTime.format(shortFormatter);
         System.out.println(formattedShort);
 
-        // С локальню по умолчанию
+        // С локалью по умолчанию
         String formattedWithSystemLocale = zonedDateTime.format(
                 DateTimeFormatter.ofLocalizedDateTime(
                         FormatStyle.FULL, FormatStyle.FULL));
