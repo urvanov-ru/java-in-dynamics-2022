@@ -48,19 +48,6 @@ public class Creature {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Creature creature = (Creature) o;
-        return id == creature.id && Double.compare(creature.health, health) == 0 && Double.compare(creature.x, x) == 0 && Double.compare(creature.y, y) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, health, x, y);
-    }
-
-    @Override
     public String toString() {
         return "Creature{" +
                 "id=" + id +
