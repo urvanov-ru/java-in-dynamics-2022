@@ -88,7 +88,7 @@
 		{
 			"name": "delete",
 			"request": {
-				"method": "PUT",
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -108,6 +108,25 @@
 					"path": [
 						"creatures",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/actuator/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
 					]
 				}
 			},
