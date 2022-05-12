@@ -23,7 +23,7 @@ public class GoblinConstructor {
 
 
     // Приватный конструктор. Его можно будет вызвать
-    // только внутри этого метода.
+    // только внутри этого класса.
     private GoblinConstructor(int initialDiamonds) {
         diamonds = initialDiamonds;
     }
