@@ -12,13 +12,16 @@ public class NarrowingPrimitiveConversion {
         double dMinusZero = -0.0;
         double dNaN = Double.NaN;
 
-        float fPositiveInfinity = (float) dPositiveInfinity; // +Infinity сужающее преобразование
-        float fNegativeInfinity = (float) dNegativeInfinity; // -Infinity сужающее преобразование
+        float fPositiveInfinity = (float) dPositiveInfinity; // +Infinity
+                                             // сужающее преобразование
+        float fNegativeInfinity = (float) dNegativeInfinity; // -Infinity
+                                            // сужающее преобразование
         float fPlusZero = (float) dPlusZero; //0.0f сужающее преобразование
         float fMinusZero = (float) dMinusZero; //-0.0f сужающее преобразование
         float fNaN = (float) dNaN; // NaN сужающее преобразование
         float f1 = (float) d1;             // сужающее преобразование
-        int n = (int) d1; // 2             // сужающее преобразование. Дробная часть отбрасывается
+        int n = (int) d1; // 2             // сужающее преобразование.
+                                           // Дробная часть отбрасывается
 
         System.out.println(fPositiveInfinity);
         System.out.println(fNegativeInfinity);
