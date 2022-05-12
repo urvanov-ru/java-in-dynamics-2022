@@ -53,8 +53,8 @@ public class IfThenElse {
         // согласно соглашению о кодировании в Java.
         boolean b;
         if (b = x > 0) {
-            // Теперь b присвоено true, как результат метода
-            // obj1.someMethodReturnsBoolean()
+            // Теперь b присвоено true, как результат
+            // x > 0
         } else {
             // А вот здесь b присвоено false.
         }
