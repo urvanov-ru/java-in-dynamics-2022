@@ -14,7 +14,8 @@ public class OptionalExample3 {
     static class NoResultValueException extends Exception {
     }
 
-    public static void main(String[] args) throws NoResultValueException {
+    public static void main(String[] args)
+            throws NoResultValueException {
         Integer result = Optional.ofNullable(new MyClass())
                 .flatMap(MyClass::getSomeValue)
                 .orElseThrow(NoResultValueException::new);

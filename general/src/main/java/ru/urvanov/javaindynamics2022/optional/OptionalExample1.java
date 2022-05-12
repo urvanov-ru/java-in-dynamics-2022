@@ -36,8 +36,9 @@ public class OptionalExample1 {
     static class E {}
 
     public static void main(String[] args) {
-        D d = Optional.ofNullable(new A()).map(A::getB).map(b -> b.getC())
-                .map(C::getD).orElse(new D("from orElse"));
+        D d = Optional.ofNullable(new A()).map(A::getB)
+                .map(b -> b.getC()).map(C::getD)
+                .orElse(new D("from orElse"));
         System.out.println("d = " + d);
     }
 }
