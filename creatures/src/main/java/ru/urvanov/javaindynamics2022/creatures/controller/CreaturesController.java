@@ -12,11 +12,12 @@ import ru.urvanov.javaindynamics2022.creatures.service.CreatureService;
 @RequestMapping("/creatures")
 public class CreaturesController {
 
-    @Autowired
-    private CreatureService creatureService;
-
     private static Logger logger
             = LoggerFactory.getLogger(CreaturesController.class);
+
+
+    @Autowired
+    private CreatureService creatureService;
 
     @PostMapping
     public Mono<Long> create(@RequestBody Creature creature) {
