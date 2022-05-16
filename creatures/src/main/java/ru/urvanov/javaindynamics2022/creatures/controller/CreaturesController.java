@@ -15,7 +15,7 @@ public class CreaturesController {
     @Autowired
     private CreatureService creatureService;
 
-    private Logger logger
+    private static Logger logger
             = LoggerFactory.getLogger(CreaturesController.class);
 
     @PostMapping
