@@ -37,13 +37,13 @@ public class StringCreation {
 
         String vasyaSchool = "Vasya goes to school."
                 + " Petya does the same thing too."
-                + " Turtle power!!!";
+                + " Turtle is green.";
         System.out.println(vasyaSchool);
 
         String vasyaSchool2 = """
                 Vasya goes to school. \
                 Petya does the same thing too. \
-                Turtle power!!!""";
+                Turtle is green.""";
         System.out.println(vasyaSchool2);
 
 
