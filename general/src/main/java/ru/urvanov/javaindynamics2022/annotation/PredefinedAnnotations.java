@@ -1,5 +1,7 @@
 package ru.urvanov.javaindynamics2022.annotation;
 
+import java.util.List;
+
 public class PredefinedAnnotations extends ParentPredefinedAnnotations{
 
     PredefinedAnnotations objectOne;
@@ -25,5 +27,11 @@ public class PredefinedAnnotations extends ParentPredefinedAnnotations{
     void useDeprecatedMethod() {
         // Используем устаревший метод.
         objectOne.deprecatedMethod();
+    }
+
+
+    @SafeVarargs
+    public final void varargsMethod(List<String>... arrayOfListStrings) {
+
     }
 }
